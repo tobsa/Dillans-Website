@@ -1,6 +1,12 @@
 ﻿body {
     padding-top: 75px;
     padding-bottom: 20px;
+
+    background: url(Images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -16,9 +22,15 @@
     white-space: normal;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 340px) {
      .body-content {
          margin: 0px;
-         padding: 0px;
+         padding: 10px;
+     }
+}
+
+@media (min-width: 340px) {
+     .container {
+         width: 336px;
      }
 }
