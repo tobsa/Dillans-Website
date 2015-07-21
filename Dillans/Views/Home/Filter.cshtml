@@ -15,9 +15,11 @@
             </div>
 
             <div class="col-xs-6 col-sm-2">
-                <button type="submit" class="btn btn-default btn-block">Add to filter</button>
+                <button type="submit" class="btn btn-default btn-block">
+                    <span class="glyphicon glyphicon-filter"></span>
+                    Add to filter
+                </button>
             </div>
-
         }
     </div>
 </div>
@@ -31,7 +33,10 @@
             <div class="col-xs-6">
                 @using (Html.BeginForm("ClearFilter", "Home", FormMethod.Post))
                 {
-                    <button type="submit" class="btn btn-default btn-block">Clear</button>
+                    <button type="submit" class="btn btn-default btn-block">
+                        <span class="glyphicon glyphicon-trash"></span>
+                        Clear
+                    </button>
                 }
             </div>
         </div>

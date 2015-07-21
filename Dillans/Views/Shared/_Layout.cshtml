@@ -16,11 +16,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Dillans", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+                @Html.ActionLink("Menu", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Filter", "Filter", "Home")</li>
+                    <li>
+                        <a href="@Url.Action("Filter", "Home")">
+                            <span class="glyphicon glyphicon-filter"></span>
+                            Filter
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
