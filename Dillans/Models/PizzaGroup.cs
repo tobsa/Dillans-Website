@@ -12,6 +12,6 @@ namespace Dillans.Models
         public int CostChildren { get; set; }
         public int CostPartner { get; set; }
         public int CostFamily { get; set; }
-        public List<Pizza> Pizzas { get; set; } 
+        public List<Pizza> Pizzas { get; set; }
     }
 }

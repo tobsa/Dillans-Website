@@ -25,6 +25,12 @@ namespace Dillans.Models
 
         public int Number { get; set; }
         public string Name { get; set; }
-        public List<Ingredient> Ingredients { get; set; } 
+        public List<Ingredient> Ingredients { get; set; }
+
+        public string GetIngredientName(int index)
+        {
+            var name = Ingredients[index].Description().ToLower();
+            return index == Ingredients.Count - 1 ? name : name + ", ";
+        }
     }
 }
