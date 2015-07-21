@@ -10,41 +10,29 @@ namespace Dillans.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly PizzaService _service = new PizzaService();
+        private readonly PizzaService service = new PizzaService();
 
         public ActionResult Index()
         {
-            _service.ResetSession();
+            service.ResetSession();
 
             var model = new HomeViewModel()
             {
-                PizzaGroups = _service.GetPizzaGroups()
+                PizzaGroups = service.GetPizzaGroups()
             };
 
             return View(model);
         }
 
-        [HttpPost]
-        public ActionResult IndexFilter()
-        {
-            var model = new HomeViewModel()
-            {
-                PizzaGroups = _service.GetFilteredPizzaGroups()
-            };
-
-            _service.ResetSession();
-
-            return View("Index", model);
-        }
-
         public ActionResult Filter()
         {
-            _service.ResetSession();
+            service.ResetSession();
 
             var model = new FilterViewModel()
             {
-                FreeIngredients = _service.GetFreeIngredients(),
-                UsedIngredients = _service.GetUsedIngredients()
+                FreeIngredients = service.GetFreeIngredients(),
+                UsedIngredients = service.GetUsedIngredients(),
+                PizzaGroups = service.GetPizzaGroups()
             };
 
             return View(model);
@@ -56,15 +44,31 @@ namespace Dillans.Controllers
             if (string.IsNullOrWhiteSpace(ingredient))
                 return View("Error");
 
-            _service.AddUsedIngredient(ingredient);
+            service.AddUsedIngredient(ingredient);
 
             var model = new FilterViewModel()
             {
-                FreeIngredients = _service.GetFreeIngredients(),
-                UsedIngredients = _service.GetUsedIngredients()
+                FreeIngredients = service.GetFreeIngredients(),
+                UsedIngredients = service.GetUsedIngredients(),
+                PizzaGroups = service.GetFilteredPizzaGroups()
             };
 
             return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult ClearFilter()
+        {
+            service.ResetSession();
+
+            var model = new FilterViewModel()
+            {
+                FreeIngredients = service.GetFreeIngredients(),
+                UsedIngredients = service.GetUsedIngredients(),
+                PizzaGroups = service.GetFilteredPizzaGroups()
+            };
+
+            return RedirectToAction("Filter", model);
         }
     }
 }

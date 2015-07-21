@@ -5,26 +5,7 @@
     ViewBag.Title = "Dillans";
 }
 
-@foreach (var group in Model.PizzaGroups)
-{
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-heading">
-            @group.Name
-        </li>
+@Html.Partial("_DisplayPizzas", Model.PizzaGroups)
 
-        @foreach (var pizza in group.Pizzas)
-        {
-            <li class="list-group-item">
-                <div>
-                    <strong>@pizza.Name</strong>
-                </div>
 
-                @foreach (var ingredient in pizza.Ingredients)
-                {
-                    <span>@ingredient.Description(),</span>
-                }
-            </li>
-        }
-    </ul>
-}
 
