@@ -14,6 +14,10 @@ namespace Dillans.Models
                 new PizzaGroup()
                 {
                     Name = "Prisklass 1",
+                    Cost = 55,
+                    CostChildren = 50,
+                    CostPartner = 80,
+                    CostFamily = 120,
                     Pizzas = new List<Pizza>()
                     {
                         new Pizza(1, "Margherita", new List<Ingredient>()),
@@ -28,6 +32,10 @@ namespace Dillans.Models
                 new PizzaGroup()
                 {
                     Name = "Prisklass 2",
+                    Cost = 60,
+                    CostChildren = 55,
+                    CostPartner = 85,
+                    CostFamily = 130,
                     Pizzas = new List<Pizza>()
                     {
                         new Pizza(7, "Tomasso", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Räkor }),
@@ -45,6 +53,10 @@ namespace Dillans.Models
                 new PizzaGroup()
                 {
                     Name = "Prisklass 3",
+                    Cost = 65,
+                    CostChildren = 60,
+                    CostPartner = 95,
+                    CostFamily = 140,
                     Pizzas = new List<Pizza>()
                     {
                         new Pizza(16, "Quattro Stagioni", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Räkor, Ingredient.Musslor, Ingredient.Champinjoner, Ingredient.Oliver, Ingredient.Kronärtskocka }),
@@ -67,6 +79,10 @@ namespace Dillans.Models
                 new PizzaGroup()
                 {
                     Name = "Prisklass 4",
+                    Cost = 70,
+                    CostChildren = 65,
+                    CostPartner = 100,
+                    CostFamily = 150,
                     Pizzas = new List<Pizza>()
                     {
                         new Pizza(30, "Pizza Mexi", new List<Ingredient>() { Ingredient.Köttfärs, Ingredient.Tacokryddmix, Ingredient.Vitlök, Ingredient.Lök, Ingredient.Tacosås, Ingredient.GreenChili }),
@@ -87,6 +103,10 @@ namespace Dillans.Models
                 new PizzaGroup()
                 {
                     Name = "Prisklass 5",
+                    Cost = 75,
+                    CostChildren = 70,
+                    CostPartner = 105,
+                    CostFamily = 160,
                     Pizzas = new List<Pizza>()
                     {
                         new Pizza(41, "Lena", new List<Ingredient>() { Ingredient.Lök, Ingredient.Paprika, Ingredient.Oxfile, Ingredient.Räkor, Ingredient.Bearnaisesås }),
@@ -133,23 +153,27 @@ namespace Dillans.Models
                 },
 
                 new PizzaGroup()
+                {
+                    Name = "Mozarella",
+                    Cost = 75,
+                    CostChildren = 70,
+                    CostPartner = 105,
+                    CostFamily = 160,
+                    Pizzas = new List<Pizza>()
                     {
-                        Name = "Mozarella",
-                        Pizzas = new List<Pizza>()
-                        {
-                            new Pizza("Le Chef", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.SoltorkadeTomater, Ingredient.Parmaskinka, Ingredient.Ruccolasallad }),
-                            new Pizza("Musti", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Vitlök, Ingredient.SoltorkadeTomater, Ingredient.Parmaskinka, Ingredient.Mortadella, Ingredient.Pepparsalami }),
-                            new Pizza("Vatikan", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Oxfile, Ingredient.FärskTomat, Ingredient.Bearnaisesås }),
-                            new Pizza("Bogart", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Fläskfile, Ingredient.Lök, Ingredient.FärskTomat, Ingredient.Bearnaisesås }),
-                            new Pizza("Chisto", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Lök, Ingredient.Feferoni, Ingredient.Cayennepeppar, Ingredient.Pepparsalami}),
-                            new Pizza("Izo", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.SoltorkadeTomater, Ingredient.Parmaskinka, Ingredient.Pesto, Ingredient.Ruccolasallad }),
-                            new Pizza("Parma", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Oliver, Ingredient.Parmaskinka, Ingredient.Ruccolasallad }),
-                            new Pizza("Ruccola", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.FärskTomat, Ingredient.Ruccolasallad, Ingredient.Olivolja, Ingredient.Champinjoner, Ingredient.Oliver }),
-                            new Pizza("Fanny", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Paprika, Ingredient.Champinjoner, Ingredient.Parmaskinka, Ingredient.Mortadella }),
-                            new Pizza("Sinatra", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Paprika, Ingredient.Lök, Ingredient.Fläskfile, Ingredient.Bearnaisesås }),
-                            new Pizza("Italiens", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.FärskTomat}),
-                        }
+                        new Pizza("Le Chef", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.SoltorkadeTomater, Ingredient.Parmaskinka, Ingredient.Ruccolasallad }),
+                        new Pizza("Musti", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Vitlök, Ingredient.SoltorkadeTomater, Ingredient.Parmaskinka, Ingredient.Mortadella, Ingredient.Pepparsalami }),
+                        new Pizza("Vatikan", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Oxfile, Ingredient.FärskTomat, Ingredient.Bearnaisesås }),
+                        new Pizza("Bogart", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Fläskfile, Ingredient.Lök, Ingredient.FärskTomat, Ingredient.Bearnaisesås }),
+                        new Pizza("Chisto", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Lök, Ingredient.Feferoni, Ingredient.Cayennepeppar, Ingredient.Pepparsalami}),
+                        new Pizza("Izo", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.SoltorkadeTomater, Ingredient.Parmaskinka, Ingredient.Pesto, Ingredient.Ruccolasallad }),
+                        new Pizza("Parma", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Oliver, Ingredient.Parmaskinka, Ingredient.Ruccolasallad }),
+                        new Pizza("Ruccola", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.FärskTomat, Ingredient.Ruccolasallad, Ingredient.Olivolja, Ingredient.Champinjoner, Ingredient.Oliver }),
+                        new Pizza("Fanny", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Paprika, Ingredient.Champinjoner, Ingredient.Parmaskinka, Ingredient.Mortadella }),
+                        new Pizza("Sinatra", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Paprika, Ingredient.Lök, Ingredient.Fläskfile, Ingredient.Bearnaisesås }),
+                        new Pizza("Italiens", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.FärskTomat}),
                     }
+                }
             };
         }
     }

@@ -24,7 +24,7 @@ namespace Dillans
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/sandstone.css",
                       "~/Content/site.css"));
         }
     }

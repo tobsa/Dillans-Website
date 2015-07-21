@@ -5,7 +5,26 @@
 {
     <ul class="list-group">
         <li class="list-group-item list-group-item-heading">
-            @group.Name
+            <div class="row">
+                <div class="col-xs-8">
+                    <strong>@group.Name</strong>
+                </div>
+                <div class="col-xs-4">
+                    <span style="color: red;">@group.Cost:-</span>
+                </div>
+            </div>
+            <div class="row" style="font-size: 10px;">
+                <div class="col-xs-4">
+                    <em>Barn @group.CostChildren:-</em>
+                </div>
+                <div class="col-xs-4">
+                    <em>Sambo @group.CostPartner:-</em>
+                </div>
+                <div class="col-xs-4">
+                    <em>Familj @group.CostFamily:-</em>
+                </div>
+            </div>
+
         </li>
 
         @foreach (var pizza in group.Pizzas)
