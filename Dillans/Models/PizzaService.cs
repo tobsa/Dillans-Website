@@ -18,5 +18,42 @@ namespace Dillans.Models
         {
             return EnumUtil.GetValues<Ingredient>().Select(x => x.Description()).ToList();
         }
+
+        public List<string> GetFreeIngredients()
+        {
+            return GetIngredients().Where(x => GetUsedIngredients().All(y => x != y)).ToList();
+        }
+
+        public List<string> GetUsedIngredients()
+        {
+            return HttpContext.Current.Session["UsedIngredients"] as List<string> ?? new List<string>();
+        }
+
+        public void AddUsedIngredient(string ingredient)
+        {
+            var usedIngredients = GetUsedIngredients();
+            
+            if (!usedIngredients.Contains(ingredient))
+                usedIngredients.Add(ingredient);
+
+            HttpContext.Current.Session["UsedIngredients"] = usedIngredients;
+        }
+
+        public List<PizzaGroup> GetFilteredPizzaGroups()
+        {
+            var groups = GetPizzaGroups();
+
+            foreach (var group in groups)
+            {
+                group.Pizzas = group.Pizzas.Where(p => !GetUsedIngredients().Except(p.Ingredients.Select(i => i.Description())).Any()).ToList();
+            }
+
+            return groups;
+        }
+
+        public void ResetSession()
+        {
+            HttpContext.Current.Session["UsedIngredients"] = null;
+        }
     }
 }

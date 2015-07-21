@@ -14,6 +14,8 @@ namespace Dillans.Controllers
 
         public ActionResult Index()
         {
+            _service.ResetSession();
+
             var model = new HomeViewModel()
             {
                 PizzaGroups = _service.GetPizzaGroups()
@@ -22,11 +24,44 @@ namespace Dillans.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public ActionResult IndexFilter()
+        {
+            var model = new HomeViewModel()
+            {
+                PizzaGroups = _service.GetFilteredPizzaGroups()
+            };
+
+            _service.ResetSession();
+
+            return View("Index", model);
+        }
+
         public ActionResult Filter()
         {
+            _service.ResetSession();
+
             var model = new FilterViewModel()
             {
-                Ingredients = _service.GetIngredients()
+                FreeIngredients = _service.GetFreeIngredients(),
+                UsedIngredients = _service.GetUsedIngredients()
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Filter(string ingredient)
+        {
+            if (string.IsNullOrWhiteSpace(ingredient))
+                return View("Error");
+
+            _service.AddUsedIngredient(ingredient);
+
+            var model = new FilterViewModel()
+            {
+                FreeIngredients = _service.GetFreeIngredients(),
+                UsedIngredients = _service.GetUsedIngredients()
             };
 
             return View(model);

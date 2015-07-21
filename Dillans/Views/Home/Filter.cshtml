@@ -4,7 +4,37 @@
     ViewBag.Title = "Filter";
 }
 
-@Html.DropDownList("Ingredients", new SelectList(Model.Ingredients), new { @class="form-control" })
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 col-sm-3">
+            @using (Html.BeginForm())
+            {
+                @Html.DropDownList("Ingredient", new SelectList(Model.FreeIngredients), new { @class = "form-control" })
+                <button type="submit" class="btn btn-default btn-block">Add to filter</button>
+            }
+        </div>
+
+        <div class="col-xs-6 col-sm-3">
+            @using (Html.BeginForm("IndexFilter", "Home", FormMethod.Post))
+            {
+                <button type="submit" class="btn btn-default btn-block">Filter</button>
+            }
+        </div>
+    </div>
+</div>
+
+@foreach (var ingredient in Model.UsedIngredients)
+{
+    <div>
+        @ingredient
+    </div>
+}
+
+
+
+
+
+
 
 
 

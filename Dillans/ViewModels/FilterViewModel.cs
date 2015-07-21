@@ -8,6 +8,7 @@ namespace Dillans.ViewModels
 {
     public class FilterViewModel
     {
-        public List<string> Ingredients { get; set; }
+        public List<string> FreeIngredients { get; set; }
+        public List<string> UsedIngredients { get; set; } 
     }
 }
