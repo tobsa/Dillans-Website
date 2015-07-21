@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<hr/>
+<hr />
 
 @if (Model.UsedIngredients.Count > 0)
 {
@@ -42,18 +42,21 @@
                 {
                     foreach (var ingredient in Model.UsedIngredients)
                     {
-                        <div>
-                             @ingredient
-                            
-                            <button type="submit" name="ingredient" value="@ingredient" class="btn-link btn-xs" style="color: red;">
-                                <i class="glyphicon gly glyphicon-remove"></i>
-                            </button>
-                            
-                            
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <p>@ingredient</p>
+                            </div>
+
+                            <div class="col-xs-4">
+                                <button type="submit" name="ingredient" value="@ingredient" class="btn-link" style="color: red;">
+                                    <i class="glyphicon gly glyphicon-remove"></i>
+                                </button>
+                            </div>
                         </div>
                     }
                 }
             </div>
+
         </div>
     </div>
 

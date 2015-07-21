@@ -55,5 +55,14 @@ namespace Dillans.Models
         {
             HttpContext.Current.Session["UsedIngredients"] = null;
         }
+
+        public void RemoveUsedIngredient(string ingredient)
+        {
+            var usedIngredients = GetUsedIngredients();
+
+            usedIngredients.Remove(ingredient);
+
+            HttpContext.Current.Session["UsedIngredients"] = usedIngredients;
+        }
     }
 }

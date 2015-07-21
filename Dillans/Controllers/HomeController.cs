@@ -26,13 +26,11 @@ namespace Dillans.Controllers
 
         public ActionResult Filter()
         {
-            service.ResetSession();
-
             var model = new FilterViewModel()
             {
                 FreeIngredients = service.GetFreeIngredients(),
                 UsedIngredients = service.GetUsedIngredients(),
-                PizzaGroups = service.GetPizzaGroups()
+                PizzaGroups = service.GetFilteredPizzaGroups()
             };
 
             return View(model);
@@ -60,6 +58,21 @@ namespace Dillans.Controllers
         public ActionResult ClearFilter()
         {
             service.ResetSession();
+
+            var model = new FilterViewModel()
+            {
+                FreeIngredients = service.GetFreeIngredients(),
+                UsedIngredients = service.GetUsedIngredients(),
+                PizzaGroups = service.GetFilteredPizzaGroups()
+            };
+
+            return RedirectToAction("Filter", model);
+        }
+
+        [HttpPost]
+        public ActionResult RemoveFilter(string ingredient)
+        {
+            service.RemoveUsedIngredient(ingredient);
 
             var model = new FilterViewModel()
             {
