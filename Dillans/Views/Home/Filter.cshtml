@@ -1,0 +1,11 @@
+﻿@model Dillans.ViewModels.FilterViewModel
+
+@{
+    ViewBag.Title = "Filter";
+}
+
+@Html.DropDownList("Ingredients", new SelectList(Model.Ingredients), new { @class="form-control" })
+
+
+
+
