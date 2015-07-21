@@ -13,5 +13,10 @@ namespace Dillans.Models
         {
             return _repository.GetPizzaGroups();
         }
+
+        public List<string> GetIngredients()
+        {
+            return EnumUtil.GetValues<Ingredient>().Select(x => x.Description()).ToList();
+        }
     }
 }

@@ -7,9 +7,18 @@ namespace Dillans.Models
 {
     public class Pizza
     {
+        public static int InvalidNumber = -1;
+
         public Pizza(int number, string name, List<Ingredient> ingredients)
         {
             Number = number;
+            Name = name;
+            Ingredients = ingredients;
+        }
+
+        public Pizza(string name, List<Ingredient> ingredients)
+        {
+            Number = InvalidNumber;
             Name = name;
             Ingredients = ingredients;
         }

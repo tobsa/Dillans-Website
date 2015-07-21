@@ -24,7 +24,12 @@ namespace Dillans.Controllers
 
         public ActionResult Filter()
         {
-            throw new NotImplementedException();
+            var model = new FilterViewModel()
+            {
+                Ingredients = _service.GetIngredients()
+            };
+
+            return View(model);
         }
     }
 }

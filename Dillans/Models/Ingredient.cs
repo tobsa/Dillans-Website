@@ -116,4 +116,12 @@ namespace Dillans.Models
             return da.Length > 0 ? da[0].Description : value.ToString();
         }
     }
+
+    public static class EnumUtil
+    {
+        public static IEnumerable<T> GetValues<T>()
+        {
+            return Enum.GetValues(typeof(T)).Cast<T>();
+        }
+    }
 }
