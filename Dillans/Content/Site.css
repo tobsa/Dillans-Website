@@ -22,15 +22,15 @@
     white-space: normal;
 }
 
-@media (max-width: 340px) {
+@media (max-width: 384px) {
      .body-content {
          margin: 0px;
          padding: 2px;
      }
 }
 
-@media (min-width: 340px) {
+@media (min-width: 384px) {
      .container {
-         width: 336px;
+         width: 360px;
      }
 }

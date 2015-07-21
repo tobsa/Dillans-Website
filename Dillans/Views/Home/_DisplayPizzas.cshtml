@@ -1,6 +1,7 @@
 ﻿@using Dillans.Models
 @model List<Dillans.Models.PizzaGroup>
 
+@Scripts.Render("~/bundles/jquery")
 
 @foreach (var group in Model.Where(x => x.Pizzas.Count > 0))
 {
@@ -20,17 +21,15 @@
                     <em>Sambo @group.CostPartner:-</em>
                     <em style="padding-left: 10px;">Familj @group.CostFamily:-</em>
                 </div>
-                <div class="col-xs-2" style="font-size: 16px; color: red;">
-                    <span><i class="fa-pencil" title="Edit"></i></span>
-
-                    @*<button type="submit" class="btn-link">
-                        <span><i class="fa fa-camera"></i></span>
-                    </button>*@
+                <div class="col-xs-2 text-center" style="font-size: 20px; color: red;">
+                    <button type="submit" class="btn-link toggle" data-name="@group.Name.Replace(" ", "_")" style="color: #3e3f3a;">
+                        <span><i class="glyphicon glyphicon-chevron-down"></i></span>
+                    </button>
                 </div>
             </div>
         </div>
 
-        <ul class="list-group" style="padding: 5px;">
+        <ul class="list-group @group.Name.Replace(" ", "_")" style="padding: 5px;">
             @foreach (var pizza in group.Pizzas)
             {
                 <li class="list-group-item" style="padding: 6px;">
@@ -63,7 +62,12 @@
         </ul>
 
     </div>
-    
-    
-
 }
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.toggle').click(function () {
+            $('.' + $(this).data('name')).toggle();
+        });
+    });
+</script>

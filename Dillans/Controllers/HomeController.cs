@@ -39,10 +39,10 @@ namespace Dillans.Controllers
         [HttpPost]
         public ActionResult Filter(string ingredient)
         {
-            if (string.IsNullOrWhiteSpace(ingredient))
-                return View("Error");
-
-            service.AddUsedIngredient(ingredient);
+            if (!string.IsNullOrWhiteSpace(ingredient))
+            {
+                service.AddUsedIngredient(ingredient);
+            }
 
             var model = new FilterViewModel()
             {
