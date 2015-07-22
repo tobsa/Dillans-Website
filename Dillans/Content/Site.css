@@ -6,7 +6,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover !important;
+    background-attachment: fixed !important;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -48,6 +49,8 @@
 .collapse {
     background: transparent;
 }
+
+
 
 /*@media (min-width: 1000px) {
      .container {
