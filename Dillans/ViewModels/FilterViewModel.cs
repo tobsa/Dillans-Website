@@ -6,10 +6,9 @@ using Dillans.Models;
 
 namespace Dillans.ViewModels
 {
-    public class FilterViewModel
+    public class FilterViewModel : BaseViewModel
     {
         public List<string> FreeIngredients { get; set; }
         public List<string> UsedIngredients { get; set; }
-        public List<PizzaGroup> PizzaGroups { get; set; } 
     }
 }

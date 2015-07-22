@@ -1,11 +1,12 @@
 ﻿@using Dillans.Models
+@using Dillans.ViewModels
 @model Dillans.ViewModels.HomeViewModel
 
 @{
     ViewBag.Title = "Dillans";
 }
 
-@Html.Partial("_DisplayPizzas", Model.PizzaGroups)
+@Html.Partial("_DisplayPizzas", (BaseViewModel)Model)
 
 
 

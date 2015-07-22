@@ -22,7 +22,7 @@ namespace Dillans.Models
                     {
                         new Pizza(1, "Margherita", new List<Ingredient>()),
                         new Pizza(2, "Vesuvio", new List<Ingredient>() { Ingredient.Skinka }),
-                        new Pizza(3, "Calzone", new List<Ingredient>() { Ingredient.Skinka }),
+                        new Pizza(3, "Calzone", new List<Ingredient>() { Ingredient.Skinka }, new List<Type>() { Type.Inbakad }),
                         new Pizza(4, "Kasalinka", new List<Ingredient>() { Ingredient.Champinjoner }),
                         new Pizza(5, "Bari", new List<Ingredient>(){ Ingredient.Salami }),
                         new Pizza(6, "Al tono", new List<Ingredient>() { Ingredient.Tonfisk })
@@ -60,19 +60,19 @@ namespace Dillans.Models
                     Pizzas = new List<Pizza>()
                     {
                         new Pizza(16, "Quattro Stagioni", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Räkor, Ingredient.Musslor, Ingredient.Champinjoner, Ingredient.Oliver, Ingredient.Kronärtskocka }),
-                        new Pizza(17, "Mexicana", new List<Ingredient>() { Ingredient.Köttfärs, Ingredient.Lök, Ingredient.Paprika }),
-                        new Pizza(18, "Calzone Special", new List<Ingredient>() { Ingredient.Gorgonzola, Ingredient.Köttfärssås }),
+                        new Pizza(17, "Mexicana", new List<Ingredient>() { Ingredient.Köttfärs, Ingredient.Lök, Ingredient.Paprika }, new List<Type>() { Type.Stark }),
+                        new Pizza(18, "Calzone Special", new List<Ingredient>() { Ingredient.Gorgonzola, Ingredient.Köttfärssås }, new List<Type>() { Type.Inbakad }),
                         new Pizza(19, "Daniels Special", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Räkor, Ingredient.Köttfärssås }),
                         new Pizza(20, "Opera", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Räkor, Ingredient.Tonfisk }),
                         new Pizza(21, "Prinsessa", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Räkor, Ingredient.Ananas }),
                         new Pizza(22, "Pigalle", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Räkor, Ingredient.Feferoni }),
-                        new Pizza(23, "Mesopotamia", new List<Ingredient>() { Ingredient.Lök, Ingredient.Köttfärs, Ingredient.Salami }),
+                        new Pizza(23, "Mesopotamia", new List<Ingredient>() { Ingredient.Lök, Ingredient.Köttfärs, Ingredient.Salami }, new List<Type>() { Type.Stark }),
                         new Pizza(24, "Disco", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Räkor, Ingredient.Köttfärssås }),
                         new Pizza(25, "Jamaica", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.Räkor }),
                         new Pizza(26, "Maffioso", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Skinka, Ingredient.Gorgonzola }),
                         new Pizza(27, "Amigo", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Lök, Ingredient.Paprika, Ingredient.Köttfärssås }),
                         new Pizza(28, "Vakern", new List<Ingredient>() { Ingredient.Kyckling, Ingredient.Jordnötter }),
-                        new Pizza(29, "Mamma Mia", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Räkor, Ingredient.Gorgonzola }),
+                        new Pizza(29, "Mamma Mia", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Räkor, Ingredient.Gorgonzola }, new List<Type>() { Type.Inbakad }),
                     }
                 },
 
@@ -94,7 +94,7 @@ namespace Dillans.Models
                         new Pizza(36, "Larnaca", new List<Ingredient>() { Ingredient.Bacon, Ingredient.Salami, Ingredient.Räkor, Ingredient.Lök, Ingredient.Champinjoner, Ingredient.Paprika }),
                         new Pizza(37, "Bella Napoli", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Paprika, Ingredient.Oxfile, Ingredient.Bearnaisesås }),
                         new Pizza(38, "Kebab Pizza", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Kebabkött, Ingredient.ValfriSås }),
-                        new Pizza(39, "Amore", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.Bacon, Ingredient.Lök, Ingredient.Ägg }),
+                        new Pizza(39, "Amore", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.Bacon, Ingredient.Lök, Ingredient.Ägg }, new List<Type>() { Type.Stark }),
                         new Pizza(40, "Herrljunga Special", new List<Ingredient>() { Ingredient.Oxfile, Ingredient.Gorgonzola, Ingredient.Lök }),
 
                     }
@@ -110,23 +110,23 @@ namespace Dillans.Models
                     Pizzas = new List<Pizza>()
                     {
                         new Pizza(41, "Lena", new List<Ingredient>() { Ingredient.Lök, Ingredient.Paprika, Ingredient.Oxfile, Ingredient.Räkor, Ingredient.Bearnaisesås }),
-                        new Pizza(42, "Reale", new List<Ingredient>() { Ingredient.FärskTomat, Ingredient.Lök, Ingredient.Paprika, Ingredient.Oxfile, Ingredient.Bearnaisesås }),
-                        new Pizza(43, "Babylon", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Kebabkött, Ingredient.Vitlökssås }),
-                        new Pizza(44, "Båten", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Skinka, Ingredient.Räkor, Ingredient.Paprika, Ingredient.Bearnaisesås }),
+                        new Pizza(42, "Reale", new List<Ingredient>() { Ingredient.FärskTomat, Ingredient.Lök, Ingredient.Paprika, Ingredient.Oxfile, Ingredient.Bearnaisesås }, new List<Type>() { Type.HalvtInbakad }),
+                        new Pizza(43, "Babylon", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Kebabkött, Ingredient.Vitlökssås }, new List<Type>() { Type.Inbakad }),
+                        new Pizza(44, "Båten", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Skinka, Ingredient.Räkor, Ingredient.Paprika, Ingredient.Bearnaisesås }, new List<Type>() { Type.HalvtInbakad }),
                         new Pizza(45, "57:an Special", new List<Ingredient>() { Ingredient.Lök, Ingredient.Paprika, Ingredient.Champinjoner, Ingredient.Oxfile, Ingredient.Vitlökssås }),
                         new Pizza(46, "Gourme", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Paprika, Ingredient.Oxfile, Ingredient.Bearnaisesås }),
                         new Pizza(47, "Favoriten", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Lök, Ingredient.Kebabkött, Ingredient.Kebabsås}),
                         new Pizza(48, "Husets Special", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Lök, Ingredient.Champinjoner, Ingredient.Oxfile, Ingredient.Bearnaisesås }),
-                        new Pizza(49, "Tefat", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.Räkor, Ingredient.Salami, Ingredient.Lök }),
+                        new Pizza(49, "Tefat", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.Räkor, Ingredient.Salami, Ingredient.Lök }, new List<Type>() { Type.Dubbelinbakad, Type.Stark }),
                         new Pizza(50, "Dillans", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Lök, Ingredient.Feferoni, Ingredient.Kebabkött, Ingredient.Isbergssallad, Ingredient.FärskTomat, Ingredient.ValfriSås }),
-                        new Pizza(51, "Vikingbåt", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Feferoni, Ingredient.Kebabkött, Ingredient.Bearnaisesås, Ingredient.Lök }),
+                        new Pizza(51, "Vikingbåt", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Feferoni, Ingredient.Kebabkött, Ingredient.Bearnaisesås, Ingredient.Lök }, new List<Type>() { Type.HalvtInbakad }),
                         new Pizza(52, "Tropical Special", new List<Ingredient>() { Ingredient.Banan, Ingredient.MangoChutney, Ingredient.Kräftstjärtar, Ingredient.Curry, Ingredient.Vitlökssås }),
-                        new Pizza(53, "Kär & Galen", new List<Ingredient>() { Ingredient.Lök, Ingredient.Räkor, Ingredient.Köttfärs, Ingredient.Kräftstjärtar, Ingredient.Bearnaisesås }),
+                        new Pizza(53, "Kär & Galen", new List<Ingredient>() { Ingredient.Lök, Ingredient.Räkor, Ingredient.Köttfärs, Ingredient.Kräftstjärtar, Ingredient.Bearnaisesås }, new List<Type>() { Type.Stark }),
                         new Pizza(54, "Bombey", new List<Ingredient>() { Ingredient.Jordnötter, Ingredient.Fläskfile, Ingredient.Banan, Ingredient.MangoChutney, Ingredient.Curry, Ingredient.StarkSås }),
                         new Pizza(55, "La Banana", new List<Ingredient>() { Ingredient.Fläskfile, Ingredient.Ananas, Ingredient.Banan, Ingredient.Curry, Ingredient.ValfriSås }),
                         new Pizza(56, "Bagarens Special", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Kebabkött, Ingredient.Kebabsås, Ingredient.PommesFrites }),
                         new Pizza(57, "Messina", new List<Ingredient>() { Ingredient.Kebabkött, Ingredient.Ananas, Ingredient.StarkSås }),
-                        new Pizza(58, "Ravelli", new List<Ingredient>() { Ingredient.Ost, Ingredient.Kebabkött, Ingredient.Lök, Ingredient.Isbergssallad, Ingredient.Tomat, Ingredient.Gurka, Ingredient.Feferoni, Ingredient.Kebabsås }),
+                        new Pizza(58, "Ravelli", new List<Ingredient>() { Ingredient.Ost, Ingredient.Kebabkött, Ingredient.Lök, Ingredient.Isbergssallad, Ingredient.Tomat, Ingredient.Gurka, Ingredient.Feferoni, Ingredient.Kebabsås }, new List<Type>() { Type.Inbakad }),
                         new Pizza(59, "Malta", new List<Ingredient>() { Ingredient.Fläskfile, Ingredient.Lök, Ingredient.Vitlök, Ingredient.Tacosås, Ingredient.Kebabsås}),
                         new Pizza(60, "Alpina", new List<Ingredient>() { Ingredient.Fläskfile, Ingredient.Champinjoner, Ingredient.Lök, Ingredient.Bearnaisesås }),
                         new Pizza(61, "Herkules", new List<Ingredient>() { Ingredient.Fläskfile, Ingredient.Lök, Ingredient.Skinka, Ingredient.Bearnaisesås }),
@@ -143,12 +143,12 @@ namespace Dillans.Models
                         new Pizza(72, "Nina Special", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Skinka, Ingredient.Fetaost, Ingredient.Oliver, Ingredient.Oxfile, Ingredient.Bearnaisesås}),
                         new Pizza(73, "Quattro Formaggi (4 olika ostar)", new List<Ingredient>() { Ingredient.Mozzarella, Ingredient.Gorgonzola, Ingredient.Fetaost, Ingredient.Oxfile, Ingredient.FärskTomat }),
                         new Pizza(74, "BMW Special", new List<Ingredient>() { Ingredient.Kebabkött, Ingredient.RåLök, Ingredient.Bearnaisesås, Ingredient.Kebabsås }),
-                        new Pizza(75, "Sköterskan", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Paprika, Ingredient.Lök, Ingredient.Fläskfile, Ingredient.Banan, Ingredient.Curry  }),
+                        new Pizza(75, "Sköterskan", new List<Ingredient>() { Ingredient.Champinjoner, Ingredient.Paprika, Ingredient.Lök, Ingredient.Fläskfile, Ingredient.Banan, Ingredient.Curry  }, new List<Type>() { Type.HalvtInbakad }),
                         new Pizza(76, "Medelhavet", new List<Ingredient>() { Ingredient.BlåMusslor, Ingredient.Scampi, Ingredient.Sparris, Ingredient.Vitlök }),
                         new Pizza(77, "H.S.K", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.Räkor, Ingredient.Fläskfile, Ingredient.Bearnaisesås }),
-                        new Pizza(78, "UFO", new List<Ingredient>() { Ingredient.Lök, Ingredient.Paprika, Ingredient.Champinjoner, Ingredient.Vitlök, Ingredient.Fläskfile }),
+                        new Pizza(78, "UFO", new List<Ingredient>() { Ingredient.Lök, Ingredient.Paprika, Ingredient.Champinjoner, Ingredient.Vitlök, Ingredient.Fläskfile }, new List<Type>() { Type.Dubbelinbakad }),
                         new Pizza(79, "Black & White", new List<Ingredient>() { Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.Oxfile, Ingredient.Fläskfile, Ingredient.Bearnaisesås }),
-                        new Pizza(80, "Gabriel", new List<Ingredient>() { Ingredient.Fläskfile, Ingredient.Banan, Ingredient.Ananas, Ingredient.Jordnötter, Ingredient.Curry }),
+                        new Pizza(80, "Gabriel", new List<Ingredient>() { Ingredient.Fläskfile, Ingredient.Banan, Ingredient.Ananas, Ingredient.Jordnötter, Ingredient.Curry }, new List<Type>() { Type.HalvtInbakad }),
                     }
                 },
 
@@ -170,7 +170,7 @@ namespace Dillans.Models
                         new Pizza("Parma", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Oliver, Ingredient.Parmaskinka, Ingredient.Ruccolasallad }),
                         new Pizza("Ruccola", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.FärskTomat, Ingredient.Ruccolasallad, Ingredient.Olivolja, Ingredient.Champinjoner, Ingredient.Oliver }),
                         new Pizza("Fanny", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Paprika, Ingredient.Champinjoner, Ingredient.Parmaskinka, Ingredient.Mortadella }),
-                        new Pizza("Sinatra", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Paprika, Ingredient.Lök, Ingredient.Fläskfile, Ingredient.Bearnaisesås }),
+                        new Pizza("Sinatra", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Champinjoner, Ingredient.Paprika, Ingredient.Lök, Ingredient.Fläskfile, Ingredient.Bearnaisesås }, new List<Type>() { Type.HalvtInbakad }),
                         new Pizza("Italiens", new List<Ingredient>() { Ingredient.Tomat, Ingredient.Mozzarella, Ingredient.Skinka, Ingredient.Champinjoner, Ingredient.FärskTomat}),
                     }
                 }

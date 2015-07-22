@@ -9,28 +9,32 @@ namespace Dillans.Models
     {
         public static int InvalidNumber = -1;
 
-        public Pizza(int number, string name, List<Ingredient> ingredients)
+        public Pizza(int number, string name, List<Ingredient> ingredients, List<Type> types)
         {
             Number = number;
             Name = name;
             Ingredients = ingredients;
+            Types = types;
         }
 
-        public Pizza(string name, List<Ingredient> ingredients)
+        public Pizza(string name, List<Ingredient> ingredients) :
+            this(InvalidNumber, name, ingredients, new List<Type>())
         {
-            Number = InvalidNumber;
-            Name = name;
-            Ingredients = ingredients;
+        }
+
+        public Pizza(int number, string name, List<Ingredient> ingredients) :
+            this(number, name, ingredients, new List<Type>())
+        {
+        }
+
+        public Pizza(string name, List<Ingredient> ingredients, List<Type> types) :
+            this(InvalidNumber, name, ingredients, types)
+        {
         }
 
         public int Number { get; set; }
         public string Name { get; set; }
         public List<Ingredient> Ingredients { get; set; }
-
-        public string GetIngredientName(int index)
-        {
-            var name = Ingredients[index].Description().ToLower();
-            return index == Ingredients.Count - 1 ? name : name + ", ";
-        }
+        public List<Type> Types { get; set; } 
     }
 }

@@ -121,7 +121,9 @@
     <Compile Include="Models\PizzaGroup.cs" />
     <Compile Include="Models\PizzaRepository.cs" />
     <Compile Include="Models\PizzaService.cs" />
+    <Compile Include="Models\Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\FilterViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>

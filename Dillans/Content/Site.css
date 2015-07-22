@@ -29,8 +29,34 @@
      }
 }
 
-@media (min-width: 384px) {
+@media (min-width: 400px) {
      .container {
-         width: 360px;
+         width: 392px;
      }
 }
+
+@media (min-width: 768px) {
+     .container {
+         width: 760px;
+     }
+}
+
+.navbar-collapse {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.collapse {
+    background: transparent;
+}
+
+/*@media (min-width: 1000px) {
+     .container {
+         width: 992px;
+     }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 1592px;
+    }
+}*/
