@@ -4,7 +4,6 @@
 @Scripts.Render("~/bundles/jquery")
 
 <div class="row clearfix">
-
     @foreach (var group in Model.PizzaGroups.Where(x => x.Pizzas.Count > 0))
     {
         <div class="col-xs-12 col-sm-6">
