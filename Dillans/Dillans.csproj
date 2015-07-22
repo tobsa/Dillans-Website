@@ -130,12 +130,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Cosmo.css" />
-    <Content Include="Content\Darkly.css" />
     <Content Include="Content\Images\background.jpg" />
     <Content Include="Content\Images\pizza_icon.png" />
     <Content Include="Content\Sandstone.css" />
-    <Content Include="Content\Slate.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
