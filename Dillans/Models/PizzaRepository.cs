@@ -13,19 +13,6 @@ namespace Dillans.Models
             {
                 new PizzaGroup()
                 {
-                    Name = "Nordlunds Special",
-                    Cost = 999,
-                    CostChildren = 999,
-                    CostFamily = 999,
-                    CostPartner = 999,
-                    Pizzas = new List<Pizza>()
-                    {
-                        new Pizza(0, "Nordlunds Special", new List<Ingredient>() { Ingredient.Kräftor, Ingredient.Kräftstjärtar, Ingredient.Oliver, Ingredient.Räkor, Ingredient.Musslor })
-                    }
-                },
-
-                new PizzaGroup()
-                {
                     Name = "Prisklass 1",
                     Cost = 55,
                     CostChildren = 50,
